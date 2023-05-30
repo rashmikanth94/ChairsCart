@@ -1,0 +1,113 @@
+.navBar {
+    height: 50px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color:white;
+    padding: 7px 2%;
+    position: sticky;
+    top:0px;
+    width: 100%;
+}
+
+.chairsIcon {
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+}
+
+.navItems {
+    list-style: none;
+    margin-bottom: 0px;
+}
+
+.navItems li{
+    display: inline-block;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.navItems li:hover{
+    color:rgba(0, 136, 169, 0.8)
+}
+
+.contactButton {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    margin-top: 8px;
+    color: white;
+}
+
+.contactButton:hover{
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:640px) {
+    .logo_name {
+        display: none;
+    }
+    .navItems {
+        display: none;
+    }
+    .contactButton {
+        display: none;
+    }
+    .hamburgerMenu {
+        cursor: pointer;
+        display:block;
+        margin-top: 20px;
+        .hamLine{
+            height: 3px;
+            width: 25px;
+            background-color: white;
+            border-radius: 20px;
+            margin-bottom: 6px;
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width:640px) {
+    .hamburgerMenu {
+        display: none;
+    }
+}
+
+.menuItems {
+    width: 100%;
+    background-color: rgb(102, 102, 102);
+    color: white;
+}
+
+.itemsHolder {
+    list-style: none;
+    margin: 0px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+} 
+
+.itemsHolder li {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: 6px 0px;
+}
+
+.itemsHolder li:hover{
+    color:rgba(0, 136, 169, 0.8);
+}

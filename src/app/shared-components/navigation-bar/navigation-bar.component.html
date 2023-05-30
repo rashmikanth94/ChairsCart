@@ -1,0 +1,27 @@
+<header class="header">
+    <span class="logo">
+        <img src="assets/icons/icons8-chair-64-2.png" class="chairsIcon"/>
+        <span class="logo_name">Deepu's Enterprise</span> 
+    </span>
+    <nav>
+        <ul class="navItems">
+            <span *ngFor="let item of listItems">
+                <li (click)="handlenavigation(item)">{{item}}</li> 
+            </span>
+        </ul>
+    </nav>
+    <a><button class="contactButton">Contact us</button></a>
+    <span class="hamburgerMenu" (click)="toggleHamburger()">
+        <span class="hamLine"></span>
+        <span class="hamLine"></span>
+        <span class="hamLine"></span>
+    </span>
+</header>
+
+<div class="menuItems">
+    <ul class="itemsHolder" [style.height.px] = "showMenuItems? 100 : 0">
+        <span *ngFor="let item of listItems">
+            <li (click)="handlenavigation(item)">{{item}}</li> 
+        </span>         
+    </ul>
+</div>
