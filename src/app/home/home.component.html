@@ -1,5 +1,55 @@
-<div class="row p-2 home">
+<div class="row p-3 home">
     <div class="col-md-12">
-        home works
+        <div class="row descriptiveBlock">
+            <div class="col-md-7 d-flex justify-content-center align-items-center">
+                <span class="desc">Every
+                    <span class="hightLight">Chair</span>
+                     you need at<br>
+                      a <span class="hightLight">Single</span>
+                    <span>place</span><br>
+                    <span class="exploreButton" (click)="explore()">Explore ↓ </span>
+
+                </span><br>
+                <!-- <div>Explore</div> -->
+            </div>
+            <div class="col-md-5 d-flex justify-content-end">
+                <img src="assets/icons/banner.svg" style="width: 500px;"/>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 px-5 mt-2">
+                <div class="productsHeading">CATEGORIES</div>
+            </div>
+            <div class="col-md-12 containner">
+                <div style="align-self: center;">
+                    <img src="assets/icons/leftArrow.svg" class="swipeIcons" (click)="swipeLeft()"/>
+
+                </div>
+
+                <div class="cardsHolder">
+                    <ng-container *ngFor="let category of chairscategories">
+                        <div class="cardd" (click)="cardClick(category.name)">
+                            <div class="card-body">
+                                <img src="assets/images/Chairs_4.png" class="img">
+                            </div>
+                            <div>
+                                <img src="assets/icons/heart.svg" class="likeIcon">
+                            </div>
+                            <div class="chairs-footer d-flex justify-content-center">
+                                <span class="chairName">{{category.name}}</span>
+                                <!-- <span class="link"> 
+                                    View more →
+                                </span> -->
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+                <div style="align-self: center;">
+                    <img src="assets/icons/rightArrow.svg" class="swipeIcons" (click)="rightSwipe()"/>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

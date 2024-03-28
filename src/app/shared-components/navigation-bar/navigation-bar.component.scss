@@ -4,15 +4,20 @@
     border: 1px solid black;
 }
 
+.logo_name {
+    font-size: 22px;
+    font-weight: 600;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: black;
-    color:white;
     padding: 7px 2%;
     position: sticky;
     top:0px;
     width: 100%;
+    z-index: 1000;
+    background-color: rgb(247, 246, 246);
 }
 
 .chairsIcon {
@@ -28,28 +33,29 @@
 
 .navItems li{
     display: inline-block;
-    padding: 15px 20px;
+    padding: 15px 30px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
 
 .navItems li:hover{
-    color:rgba(0, 136, 169, 0.8)
+    color:gray;
+    transform: scale(1.2);
 }
 
 .contactButton {
     padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
+    background-color: rgb(103, 243, 103);
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     transition: all 0.3s ease 0s;
     cursor: pointer;
     margin-top: 8px;
-    color: white;
+    color: black;;
 }
 
 .contactButton:hover{
-    background-color: rgba(0, 136, 169, 0.8);
+    background-color: rgb(103, 243, 103);
 }
 
 .logo {
@@ -74,7 +80,7 @@
         .hamLine{
             height: 3px;
             width: 25px;
-            background-color: white;
+            background-color: black;
             border-radius: 20px;
             margin-bottom: 6px;
             display: block;
@@ -90,8 +96,8 @@
 
 .menuItems {
     width: 100%;
-    background-color: rgb(102, 102, 102);
-    color: white;
+    background-color: rgb(238, 238, 238);
+    color: black;
 }
 
 .itemsHolder {
@@ -109,5 +115,5 @@
 }
 
 .itemsHolder li:hover{
-    color:rgba(0, 136, 169, 0.8);
+    // color:rgba(0, 136, 169, 0.8);
 }

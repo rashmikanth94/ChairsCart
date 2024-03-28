@@ -26,5 +26,9 @@ export class NavigationBarComponent {
     } 
   }
 
+  signIn() {
+    this.router.navigate(['/login']);
+  }
+
 }
 
