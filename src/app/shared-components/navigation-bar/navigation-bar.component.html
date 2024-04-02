@@ -8,7 +8,16 @@
             <span *ngFor="let item of listItems">
                 <li (click)="handlenavigation(item)">{{item}}</li> 
             </span>
-            <a><button class="contactButton" (click)="signIn()">Sign In</button></a>
+            <a *ngIf="!isSignedIn; else welcome"><button class="contactButton" (click)="signIn()">Sign In</button></a>
+            <ng-template #welcome> 
+                <span style="position: relative;">
+                <img src="assets/icons/person-circle.svg" height="26px" style="margin-left: 20px; cursor: pointer; " (click)="showDetails()">
+                <span class="userDetails" *ngIf="showUserDetails">
+                    <span class="userName" style="font-weight: 600;;">Deepu Krishna</span>
+                    <span class="userName" (click)="signOut()">Sign Out</span>
+                </span>
+            </span>
+            </ng-template>
         </ul>
     </nav>
     <span class="hamburgerMenu" (click)="toggleHamburger()">

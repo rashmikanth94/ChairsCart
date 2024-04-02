@@ -8,7 +8,6 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { AuthenticationModule } from './authentication/authentication.module';
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { DetailComponentComponent } from './detail-component/detail-component.component';
 import { FooterComponent } from './footer/footer.component';
+import { ErrorComponent } from './error/error.component';
 
 
 
@@ -10,14 +11,16 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     NavigationBarComponent,
     DetailComponentComponent,
-    FooterComponent
+    FooterComponent,
+    ErrorComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
     NavigationBarComponent,
-    FooterComponent
+    FooterComponent,
+    ErrorComponent
   ]
 })
 export class SharedComponentsModule { }

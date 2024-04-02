@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import {SignInService} from './../../sign-in.service'
 
 @Component({
   selector: 'app-sign-in',
@@ -11,8 +12,9 @@ export class SignInComponent implements OnInit{
 
   logInForm:FormGroup;
   Email = 'Email'
-
-  constructor( private router: Router) {
+  signedIn = false;
+  InvalidCredentials = false;
+  constructor( private router: Router, private SignInService: SignInService) {
 
   }
   ngOnInit() {
@@ -32,16 +34,29 @@ export class SignInComponent implements OnInit{
       'email':formValues.email,
       'password':formValues.password
     };
-    this.redirectToHome();
+    // this.signedIn = true;
+    console.log(credentials);
+    if (this.SignInService.checkUser(credentials)){
+      this.redirectToHome();
+      this.InvalidCredentials = false;
+    } else {
+      this.InvalidCredentials = true;
+      this.clearErrorTimer();
+    }
   }
 
   redirectToSignUp() {
-    this.router.navigate(['/services'])
+    // this.router.navigate(['/signUp'])
   }
 
   redirectToHome() {
     this.router.navigate(['/home'])
   }
 
+  clearErrorTimer() {
+    const x = setTimeout(()=> {
+      this.InvalidCredentials = false;
+    },2000)
+  }
 
 }

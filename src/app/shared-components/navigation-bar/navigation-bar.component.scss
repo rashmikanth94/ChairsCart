@@ -117,3 +117,24 @@
 .itemsHolder li:hover{
     // color:rgba(0, 136, 169, 0.8);
 }
+
+.userDetails {
+    position: absolute;
+    left: -100px;
+    top: 30px;
+    width: 150px;
+    // height: 150px;
+    border: 1px solid rgb(224, 223, 223);
+    background: rgb(255, 254, 224);
+    .userName {
+        padding: 5px 10px;
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid rgb(200, 200, 200);
+        cursor: pointer;
+    }
+
+    .userName:hover {
+        background: rgb(247, 223, 179);
+    }
+}   

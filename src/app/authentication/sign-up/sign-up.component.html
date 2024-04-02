@@ -1,19 +1,16 @@
-<app-error *ngIf="InvalidCredentials"></app-error>
-
-
 <div class="row">
     <div class="col-md-12 cardHolder">
         <div class="logInCard">
             <div class="header py-4">
-                Login
+                Sign Up
             </div>
             <div class="mt-4">
-                <form [formGroup]="logInForm" autocomplete="off">
+                <form autocomplete="off">
                     <div class="username d-flex justify-content-center py-1">
                         <div>
                             <label class="custom-field">
                                 <input formControlName = 'email' style="width: 300px;" type="text">
-                                <span class="labelStyles" [ngClass]="{'displayTop':logInForm.controls['email'].value}">Enter Email</span>
+                                <span class="labelStyles" >Enter Email</span>
                             </label>
                         </div>
                     </div>
@@ -21,15 +18,15 @@
                         <div>
                             <label class="custom-field">
                                 <input formControlName = 'password' style="width: 300px;" type="password">
-                                <span class="labelStyles" [ngClass]="{'displayTop':logInForm.controls['password'].value}">Password</span>
+                                <span class="labelStyles" >Password</span>
                             </label>
                         </div>
                     </div>
                     <div class="mt-4 d-flex justify-content-center">
-                        <button type="button" (click)="submitForm()" class="logInButton">Login</button>
+                        <button type="button" (click)="submitForm()" class="logInButton">SignUp</button>
                     </div>
                     <div class="d-flex justify-content-center mt-3 helperClass">
-                        Not a member? <span class="anchorClass" (click)="redirectToSignUp()">Signup Now!</span>
+                        Already registered? <span class="anchorClass" (click)="redirectToLogIn()">LogIn Now!</span>
                     </div>
                 </form>
             </div>

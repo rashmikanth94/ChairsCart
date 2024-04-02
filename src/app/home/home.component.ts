@@ -62,6 +62,6 @@ export class HomeComponent implements OnInit{
   }
 
   cardClick(name:string) {
-    this.router.navigate(['detail']);
+    // this.router.navigate(['detail']);
   }
 }
